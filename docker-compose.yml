@@ -5,6 +5,8 @@ services:
     build:
       # Use current directory
       context: .
+      args:
+        - DEV=true
     # Map local port to container port
     ports:
       - "8000:8000"
