@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      # Use current directory
+      context: .
+    # Map local port to container port
+    ports:
+      - "8000:8000"
+    # Automatically sinc project folder to container folder
+    volumes:
+      - ./app:/app
+    # Overrides default command from Dockerfile
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
