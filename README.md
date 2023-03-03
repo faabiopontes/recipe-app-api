@@ -61,17 +61,36 @@ Test modules must start with `test_`, and must contain `__init__.py`
   - Useful for testing code that uses the database
 
 ### Writing tests
-  - Import test class
-    - `SimpleTestCase` - No database
-    - `TestCase` - Has Database
-  - Import objects to test
-  - Define test class
-  - Add test method
-  - Setup inputs
-  - Execute code to be tested
-  - Check output
+
+- Import test class
+  - `SimpleTestCase` - No database
+  - `TestCase` - Has Database
+- Import objects to test
+- Define test class
+- Add test method
+- Setup inputs
+- Execute code to be tested
+- Check output
 
 ### TDD
+
 1. Write test for behavior expected to see in code
 2. Test fails
 3. Write code so test passes
+
+### Mocking
+
+#### What is Mocking?
+
+- Override or change behavior of dependencies
+- Avoid unintended side effects (for instance unexpected results from things we are not testing)
+- Isolate code being tested
+
+#### Why use mocking?
+
+- Avoid relying on external services
+  - Can't guarantee they will be available
+  - Makes tests unpredictable and inconsistent
+- Avoid unintended consequences
+  - Accidentally sending emails
+  - Overloading external services
