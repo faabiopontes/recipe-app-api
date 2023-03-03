@@ -4,7 +4,7 @@ Sample tests
 
 from django.test import SimpleTestCase
 
-import calc
+from . import calc
 
 
 class CalcTests(SimpleTestCase):
