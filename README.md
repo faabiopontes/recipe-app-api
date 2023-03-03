@@ -97,8 +97,15 @@ Test modules must start with `test_`, and must contain `__init__.py`
   - Accidentally sending emails
   - Overloading external services
 
-  #### How to use mocking?
+#### How to use mocking?
 
-  - Use `unittest.mock`
-    - `MagicMock/Mock` - Replace real objects
-    - `path` - Override code for tests
+- Use `unittest.mock`
+  - `MagicMock/Mock` - Replace real objects
+  - `path` - Override code for tests
+
+#### Common Issues
+
+- Tests not running might be caused by missing `__init__.py` in `tests/` dir
+- Some tests might not be running because of indentation, all tests should have the same indentation
+- The prefix `test` might be missing on the method name
+- If you are having import errors they might be cause by having both `tests/` directory and `tests.py` file
