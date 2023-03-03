@@ -32,8 +32,9 @@ RUN python -m venv /py && \
   adduser \
   # No need for password since we are only logging through application
   --disabled-password \
-  # No need for home directory, again to keep it light
-  --no-create-home \
+  # To keep it light we could remove the home folder
+  # But at the moment we trying to use VS Code extension Dev Containers 
+  # --no-create-home \
   # Defines new user name
   django-user
 
