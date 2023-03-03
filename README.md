@@ -88,9 +88,17 @@ Test modules must start with `test_`, and must contain `__init__.py`
 
 #### Why use mocking?
 
+- Speed up tests, since we are not executing every service
 - Avoid relying on external services
   - Can't guarantee they will be available
   - Makes tests unpredictable and inconsistent
 - Avoid unintended consequences
+
   - Accidentally sending emails
   - Overloading external services
+
+  #### How to use mocking?
+
+  - Use `unittest.mock`
+    - `MagicMock/Mock` - Replace real objects
+    - `path` - Override code for tests
