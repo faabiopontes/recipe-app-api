@@ -70,3 +70,8 @@ Test modules must start with `test_`, and must contain `__init__.py`
   - Setup inputs
   - Execute code to be tested
   - Check output
+
+### TDD
+1. Write test for behavior expected to see in code
+2. Test fails
+3. Write code so test passes
